@@ -1,20 +1,13 @@
 import React from 'react'
-import Card from './card.jsx'
+import Card from './components/card.jsx'
+import Nav from './components/Nav.jsx'
 
 const App = () => {
   return (
-    <div>     
-     <Card />      
-     <Card />      
-     <Card />      
-     <Card />      
-     <Card />      
-     <Card />      
-     <Card />      
-     <Card />      
-     <Card />      
-     <Card />      
-     <Card />      
+    <div> 
+  <Nav />        
+ <Card/> 
+           
     </div>
   ) 
 }

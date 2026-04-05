@@ -10,11 +10,49 @@ body,html{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.poster{
+.card{
  
-  width: 400px;
-  background-color: palevioletred;
+  width: 40%;
+  background-color: rgba(14, 93, 90, 0.479);
   border-radius: 20px;
   padding: 20px;
   margin: 80px;
+  
 }
+
+.navbar{
+ height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 50px;
+  background-color: rgba(14, 93, 90, 0.479);
+} 
+.navbar .left{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar .left h2{
+  width: 200px;
+  font-size: 24px;
+}
+.navbar .left img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+} 
+.navbar .right{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navbar .right button{
+  padding: 10px 20px;
+  border: none;
+  background-color: #0e5d5a;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+} 
