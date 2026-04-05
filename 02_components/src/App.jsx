@@ -5,8 +5,8 @@ import Nav from './components/Nav.jsx'
 const App = () => {
   return (
     <div> 
-  <Nav />        
- <Card/> 
+  <Nav />              
+ <Card/>       
            
     </div>
   ) 
