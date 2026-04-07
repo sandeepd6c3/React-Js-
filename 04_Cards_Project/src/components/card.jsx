@@ -13,7 +13,7 @@ const Card = (props) => {
       <div className="center">
         <h3>
           {props.company} <span>{props.datePosted}</span>
-        </h3>
+        </h3> 
         <h2>{props.post}</h2>
         <div className="h4s">
           <h4>{props.tag1}</h4>
