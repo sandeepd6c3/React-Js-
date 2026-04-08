@@ -1,0 +1,23 @@
+.header{
+  background-color: #0b8c79;
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+ .btn{
+  background-color: white;
+  padding: 5px 10px;
+  color: #0b8c79;
+  border: none;
+  border-radius: 10px; 
+  margin: 10px;
+  font-size: 20px;
+ }
+ .logo{
+  color: rgb(50, 47, 47);
+  font-size: 30px;
+  font-weight: bold;
+  
+ }

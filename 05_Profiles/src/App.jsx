@@ -105,10 +105,14 @@ const users = [
 ];
 
 const App = () => {
+
+   
+  
   return (
     <div className="parent">
       {users.map((user, idx) => (
         <Card key={idx} elem={user} />
+           
       ))}
     </div>
   )
