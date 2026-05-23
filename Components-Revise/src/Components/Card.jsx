@@ -1,9 +1,20 @@
-function Card(){
- 
-  return  <div className="card">
-        <h1>Sandeep Choudhary</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ex. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, illum.</p>
-      </div>
+import React from "react";
 
-}
-export default Card
+const Card = (props) => {
+  return (
+    <div className="card">
+      <img
+        src={props.img}
+        alt=""
+      />
+      <h1>{props.user }</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Necessitatibus, laudantium!
+      </p>
+      <button>View Profile</button>
+    </div>
+  );
+};
+
+export default Card;

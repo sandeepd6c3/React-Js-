@@ -1,28 +1,65 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html,body{
+html,
+body {
   width: 100%;
   height: 100%;
   background-color: gray;
-}
-.card{
  
-  width: 600px;
-  height: 200px;
-  background-color: rgb(57, 118, 131);
+}
+.card {
+  width: 300px;
+  height: 420px;
+  background-color: #222;
+  color: white;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  font-size: 25px;
-  padding: 20px;
-  margin: 50px;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0; /* spacing handled by parent `.cards` */
+  text-align: center;
+}
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  zoom: 1.4;
+}
+.card button {
+  width: 100px;
+  height: 30px;
 
+  color: rgb(32, 24, 24);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-.nav{
+/* Container that lays out cards in rows */
+.cards {
+  display: flex;
+  flex-wrap: wrap;           /* allow multiple rows on small screens */
+  gap: 20px;                 /* spacing between cards */
+  justify-content: center;  /* center the row(s) */
+  padding: 40px 20px;       /* outer spacing */
+}
+
+/* Make each card responsive while keeping an approx 300px base */
+.card {
+  flex: 0 1 300px; /* don't grow, can shrink, base width 300px */
+}
+
+/* .nav{
   width: 100%;
   height: 80px;
   background-color: rgb(36, 112, 100);
@@ -39,4 +76,4 @@ html,body{
   display: flex;
   align-items: center;
   gap: 20px;
-}
+} */
