@@ -4,7 +4,7 @@ import Herotext from './Herotext'
 
 const LeftContent = () => {
   return (
-    <div className='w-1/3  h-full  flex flex-col bg-blue-200 '>
+    <div className='w-1/3  h-full  flex flex-col   '>
   <Herotext/>
   <Arrow/>
   </div>
