@@ -1,0 +1,162 @@
+
+*{
+  paading: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+   
+}
+
+/* Container layout to center the form on the page */
+form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.reg{
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2a76ce;
+   padding-top: 40;
+}
+
+/* Wrap each label and input group into vertical stacks */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* Standard styling for main labels */
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+/* Style for text inputs, password, emails, selects, and textareas */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  background-color: #fafafa;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+/* Interaction focus state */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15);
+}
+
+/* Row wrapper specifically for radios and checkboxes */
+.form-row-inline {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Internal styling for the label in inline rows */
+.form-row-inline > label {
+  margin-bottom: 0;
+  margin-right: 5px;
+}
+
+/* Nested text styling within checkboxes/radios */
+.inline-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #444444;
+  cursor: pointer;
+}
+
+.inline-option input {
+  cursor: pointer;
+  accent-color: #4a90e2; /* Modern color mapping for controls */
+}
+
+/* Submit Button Styles */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #357abd;
+}
+
+button[type="submit"]:active {
+  transform: scale(0.99);
+}
+
+.popup{
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   
+   width: 320px;
+   padding: 25px;
+
+   background: rgb(244, 241, 241);
+   border-radius: 10px;
+
+   box-shadow: 0 0 20px rgba(0,0,0,0.3);
+ 
+   z-index: 1000;
+   text-align: center;
+}
+
+.popup h1{
+   color: green;
+}
+
+.popup button{
+   position: absolute;
+   top: 10px;
+   right: 10px;
+
+   border: none;
+   background: transparent;
+
+   font-size: 22px;
+   cursor: pointer;
+}
+.popup i{
+    color: rgb(47, 46, 46);
+}
+ 
