@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { X } from "lucide-react";
 
 const App = () => {
   const [title, setTitle] = useState("");
@@ -7,18 +8,28 @@ const App = () => {
 
   function submitHandler(e) {
     e.preventDefault();
-    console.log(title);
-    console.log(details);
+     
 
     const copyTask = [...task];
 
     copyTask.push({ title, details });
-    console.log(copyTask);
+    
 
     setTask(copyTask);
 
     setTitle("");
     setDetails("");
+  }
+
+  const NoteDelete = (idx)=>{
+  const copyTask = [...task]
+ 
+  copyTask.splice(idx,1)
+
+  setTask(copyTask)
+  
+  
+
   }
 
   return (
@@ -62,17 +73,26 @@ const App = () => {
       <div className="  gap-5 flex-wrap lg:border-l-3  lg:w-1/2 p-10">
         <h1 className="text-4xl font-bold text-white">Your Notes</h1>
 
-        <div className="flex  gap-5 flex-wrap mt-5 mb-2 overflow-auto h-full">
+        <div className="flex  gap-5 flex-wrap mt-5 mb-2 overflow-auto h-[90%]">
           {task.map(function (elem, idx) {
             return (
               <div
                 key={idx}
-                className="h-80 w-70 gap-5 rounded pl-6 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8jBcV8EqbS-IMWpYimszqxRnaCpNKlf3gDA&s')] p-4   "
+                className=" flex justify-between   flex-col h-80 w-70 gap-5 rounded pl-6 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8jBcV8EqbS-IMWpYimszqxRnaCpNKlf3gDA&s')] p-4   "
               >
-                <h2 className="leading-tight font-bold text-2xl">
-                  {elem.title}
-                </h2>
-                <p className="text-gray-800 ">{elem.details}</p>
+                <div>
+                  {" "}
+                  <h2 className="leading-tight font-bold text-2xl">
+                    {elem.title}
+                  </h2>
+                  <p className="text-gray-800 ">{elem.details}</p>
+                </div>
+
+                <button  onClick={()=>{
+                  NoteDelete(idx)
+                }}  className="bg-red-500 rounded active:scale-95 font hover:bg-red-600 transition">
+                  Delete
+                </button>
               </div>
             );
           })}
